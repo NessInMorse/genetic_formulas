@@ -17,8 +17,8 @@ def calcAllelFreq(dom_freq, rec_freq):
 if __name__ == "__main__":
         dom_freq = 0.5
         rec_freq = (1 - dom_freq)
-        fitness = [1, 0.9, 0.8]
+        fitness = [0.25, 1, 0.25]
         hom_dom, het, hom_rec = calcAllelFreq(dom_freq, rec_freq)
         hom_dom, het, hom_rec = grantGeneticPassing(hom_dom, het, hom_rec, fitness)
         newfreq_q = calculateNewFreq(hom_dom, het, hom_rec, "q")
-        print(f"Frequences for each allel:\nP: {(1 - newfreq_q):.3f}\nq: {newfreq_q}")
+        print(f"Frequences for each allel:\nP: {(1 - newfreq_q):.3f}\nq: {newfreq_q:.3f}")
